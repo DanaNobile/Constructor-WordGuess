@@ -104,7 +104,7 @@ function userGuess() {
 //when game is complete this prompts the player to choose whether to play again
 function gameContinue() {
     inquirer
-        .gameIntro([
+        .prompt([
             {
                 name: "continue",
                 type: "list",

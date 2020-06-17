@@ -24,7 +24,7 @@ function Word(word) {
     this.checkWord = function (character) {
         for (let i = 0; i < this.wordArray.length; i++) {
             var char = this.wordArray[i];
-            char.letterCheck(character);
+            char.checkLetter(character);
         }
         return this.displayWord();
     };
