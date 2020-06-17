@@ -13,7 +13,7 @@ let pickedWord;
 // Word guess logic
 
 let wordChoice = [
-    "downward dog",
+    "lizard",
     "pigeon",
     "triangle",
     "warrior",
@@ -30,7 +30,7 @@ let wordChoice = [
 function gameIntro() {
     wordsChosen = [];
     console.log("Let's start playing the yoga posture guessing game! Enter your posture guesses in English (rather than Sanskrit).")
-    console.log("- - - - - - - - - - - -")
+    console.log("_____________")
 
     // Calls function to start game 
     gamePlay();
@@ -76,11 +76,12 @@ function userGuess() {
                 message:
                     word.displayWord() +
                     "\nGuess a letter!" +
-                    "\nuserGuess Left: " +
+                    "\nGuesses Left: " +
                     guesses,
             },
         ])
         .then(function (data) {
+
             word.wordArray.forEach((character) => {
                 character.checkLetter(data.guessedLetter);
                 checker.push(character.toString());
@@ -94,13 +95,15 @@ function userGuess() {
                     userGuess();
                 }
             } else {
-                console.log("Congrats!! You picked the correct word!");
+                console.log("Congrats!! You got the correct word!");
                 console.log(word.displayWord());
+
                 gamePlay();
             }
-        });
-}
+        }
 
+        )
+};
 //when game is complete this prompts the player to choose whether to play again
 function gameContinue() {
     inquirer
@@ -122,4 +125,7 @@ function gameContinue() {
 }
 
 // Starts game again
+
+
+
 gameIntro();
