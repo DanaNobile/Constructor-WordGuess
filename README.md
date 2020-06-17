@@ -8,4 +8,9 @@ The user has ten guesses. If the user guesses the word, or if the user runs out 
 * Constructors
 * Node.js
 
+#Resources:
+* W3 Schools
+* UCF Coding Bootcamp activities
+* UCF Coding Bootcamp class members
+
 
